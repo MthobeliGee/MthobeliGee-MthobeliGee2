@@ -1,0 +1,609 @@
+﻿@model IEnumerable<testApp1_MVC_.Models.Test1>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+<link href="~/Content/css/sb-admin-2.min.css" rel="stylesheet" />
+<link href="~/Content/css/sb-admin-2.min.css" rel="stylesheet" />
+<script src="~/Content/chart.js/Chart.bundle.js"></script>
+<script src="~/Content/js/demo/chart-bar-demo.js"></script>
+<script src="~/Content/chart.js/Chart.bundle.min.js"></script>
+<link href="~/Content/css/sb-admin-2.min.css" rel="stylesheet" />
+<script src="~/Content/chart.js/Chart.js"></script>
+<script src="~/Content/chart.js/Chart.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet">
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.surname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateOfBirth)
+        </th>
+        <th> imageTest</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.surname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dateOfBirth)
+            </td>
+            <td>
+              
+
+                @Html.ActionLink("Download", "DownloadFile", new { id = item.Id })
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+<div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
+    </div>
+    <div class="card-body">
+        <div style="border:solid">
+            <div>
+                <h3><b>Jan</b></h3>
+            </div>
+            <hr />
+
+            <h2 class="small font-weight-bold">
+                Income : R19 770
+            </h2>
+
+            <h4 class="small font-weight-bold">
+                Expenditure: R3438 <span class="float-right">17%</span>
+            </h4>
+
+            <div class="progress mb-4">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 17%;height:100px"
+                     aria-valuenow="17" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+        <br />
+
+        <div style="border:solid">
+            <div>
+                <h3><b>Feb</b></h3>
+            </div>
+            <hr />
+
+            <h2 class="small font-weight-bold">
+                Income : R29926
+            </h2>
+
+            <h4 class="small font-weight-bold">
+                Expenditure: R25382 <span class="float-right">84%</span>
+            </h4>
+
+            <div class="progress mb-4">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 84%;height:100px"
+                     aria-valuenow="84" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+
+        <br />
+
+
+        <div style="border:solid">
+            <div>
+                <h3><b>Mar</b></h3>
+            </div>
+            <hr />
+
+            <h2 class="small font-weight-bold">
+                Income : R21 500
+            </h2>
+
+            <h4 class="small font-weight-bold">
+                Expenditure: R26 737 <span class="float-right">100%</span>
+            </h4>
+
+            <div class="progress mb-4">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;height:100px"
+                     aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+        <br />
+
+        <div style="border:solid">
+            <div>
+                <h3><b>Apr</b></h3>
+            </div>
+            <hr />
+
+            <h2 class="small font-weight-bold">
+                Income : R29 023
+            </h2>
+
+            <h4 class="small font-weight-bold">
+                Expenditure: R18 685 <span class="float-right">64%</span>
+            </h4>
+
+            <div class="progress mb-4">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 64%;height:100px"
+                     aria-valuenow="64" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+        <br />
+
+        <div style="border:solid">
+            <div>
+                <h3><b>May</b></h3>
+            </div>
+            <hr />
+
+            <h2 class="small font-weight-bold">
+                Income : R24 486
+            </h2>
+
+            <h4 class="small font-weight-bold">
+                Expenditure: R22 691 <span class="float-right">93%</span>
+            </h4>
+
+            <div class="progress mb-4">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 93%;height:100px"
+                     aria-valuenow="93" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+
+        <br />
+
+        <div style="border:solid">
+            <div>
+                <h3><b>Jun</b></h3>
+            </div>
+            <hr />
+
+            <h2 class="small font-weight-bold">
+                Income : R29 245
+            </h2>
+
+            <h4 class="small font-weight-bold">
+                Expenditure: R13 706 <span class="float-right">47%</span>
+            </h4>
+
+            <div class="progress mb-4">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 47%;height:100px"
+                     aria-valuenow="47" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+
+
+
+
+
+        <br />
+
+        <div style="border:solid">
+            <div>
+                <h3><b>Jul</b></h3>
+            </div>
+            <hr />
+
+            <h2 class="small font-weight-bold">
+                Income : R28 474
+            </h2>
+
+            <h4 class="small font-weight-bold">
+                Expenditure: R10 402 <span class="float-right">37%</span>
+            </h4>
+
+            <div class="progress mb-4">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 37%;height:100px"
+                     aria-valuenow="37" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+
+
+
+        <br />
+
+        <div style="border:solid">
+            <div>
+                <h3><b>Aug</b></h3>
+            </div>
+            <hr />
+
+            <h2 class="small font-weight-bold">
+                Income : R25 398
+            </h2>
+
+            <h4 class="small font-weight-bold">
+                Expenditure: R12 039 <span class="float-right">47%</span>
+            </h4>
+
+            <div class="progress mb-4">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 47%;height:100px"
+                     aria-valuenow="47" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+
+
+        <br />
+
+        <div style="border:solid">
+            <div>
+                <h3><b>Sep</b></h3>
+            </div>
+            <hr />
+
+            <h2 class="small font-weight-bold">
+                Income : R33 953
+            </h2>
+
+            <h4 class="small font-weight-bold">
+                Expenditure: R3 411 <span class="float-right">10%</span>
+            </h4>
+
+            <div class="progress mb-4">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 10%;height:100px"
+                     aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+
+
+        <br />
+
+        <div style="border:solid">
+            <div>
+                <h3><b>Oct</b></h3>
+            </div>
+            <hr />
+
+            <h2 class="small font-weight-bold">
+                Income : R30 650
+            </h2>
+
+            <h4 class="small font-weight-bold">
+                Expenditure: R26 110 <span class="float-right">86%</span>
+            </h4>
+
+            <div class="progress mb-4">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 86%;height:100px"
+                     aria-valuenow="86" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+
+
+        <br />
+
+        <div style="border:solid">
+            <div>
+                <h3><b>Nov</b></h3>
+            </div>
+            <hr />
+
+            <h2 class="small font-weight-bold">
+                Income : R20 149
+            </h2>
+
+            <h4 class="small font-weight-bold">
+                Expenditure: R9 971 <span class="float-right">49%</span>
+            </h4>
+
+            <div class="progress mb-4">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 49%;height:100px"
+                     aria-valuenow="49" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+
+
+        <br />
+
+        <div style="border:solid">
+            <div>
+                <h3><b>Dec</b></h3>
+            </div>
+            <hr />
+
+            <h2 class="small font-weight-bold">
+                Income : 30 613
+            </h2>
+
+            <h4 class="small font-weight-bold">
+                Expenditure: R20 821 <span class="float-right">68%</span>
+            </h4>
+
+            <div class="progress mb-4">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 68%;height:100px"
+                     aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+
+
+
+    // Set new default font family and font color to mimic Bootstrap's default styling
+    Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+    Chart.defaults.global.defaultFontColor = '#858796';
+
+    function number_format(number, decimals, dec_point, thousands_sep) {
+        // *     example: number_format(1234.56, 2, ',', ' ');
+        // *     return: '1 234,56'
+        number = (number + '').replace(',', '').replace(' ', '');
+        var n = !isFinite(+number) ? 0 : +number,
+            prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
+            sep = (typeof thousands_sep === 'undefined') ? ',' : thousands_sep,
+            dec = (typeof dec_point === 'undefined') ? '.' : dec_point,
+            s = '',
+            toFixedFix = function (n, prec) {
+                var k = Math.pow(10, prec);
+                return '' + Math.round(n * k) / k;
+            };
+        // Fix for IE parseFloat(0.55).toFixed(0) = 0;
+        s = (prec ? toFixedFix(n, prec) : '' + Math.round(n)).split('.');
+        if (s[0].length > 3) {
+            s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep);
+        }
+        if ((s[1] || '').length < prec) {
+            s[1] = s[1] || '';
+            s[1] += new Array(prec - s[1].length + 1).join('0');
+        }
+        return s.join(dec);
+    }
+
+    // Bar Chart Example
+    var ctx = document.getElementById("myBarChart");
+    var myBarChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [{
+                label: "Revenue",
+                backgroundColor: "#4e73df",
+                hoverBackgroundColor: "#2e59d9",
+                borderColor: "#4e73df",
+                data: [4215, 5312, 6251, 7841, 9821, 14984],
+            }],
+        },
+        options: {
+            maintainAspectRatio: false,
+            layout: {
+                padding: {
+                    left: 10,
+                    right: 25,
+                    top: 25,
+                    bottom: 0
+                }
+            },
+            scales: {
+                xAxes: [{
+                    time: {
+                        unit: 'month'
+                    },
+                    gridLines: {
+                        display: false,
+                        drawBorder: false
+                    },
+                    ticks: {
+                        maxTicksLimit: 20
+                    },
+                    maxBarThickness: 25,
+                }],
+                yAxes: [{
+                    ticks: {
+                        min: 0,
+                        max: 15000,
+                        maxTicksLimit: 5,
+                        padding: 10,
+                        // Include a dollar sign in the ticks
+                        callback: function (value, index, values) {
+                            return '$' + number_format(value);
+                        }
+                    },
+                    gridLines: {
+                        color: "rgb(234, 236, 244)",
+                        zeroLineColor: "rgb(234, 236, 244)",
+                        drawBorder: false,
+                        borderDash: [2],
+                        zeroLineBorderDash: [2]
+                    }
+                }],
+            },
+            legend: {
+                display: false
+            },
+            tooltips: {
+                titleMarginBottom: 10,
+                titleFontColor: '#6e707e',
+                titleFontSize: 14,
+                backgroundColor: "rgb(255,255,255)",
+                bodyFontColor: "#858796",
+                borderColor: '#dddfeb',
+                borderWidth: 1,
+                xPadding: 15,
+                yPadding: 15,
+                displayColors: false,
+                caretPadding: 10,
+                callbacks: {
+                    label: function (tooltipItem, chart) {
+                        var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                        return datasetLabel + ': $' + number_format(tooltipItem.yLabel);
+                    }
+                }
+            },
+        }
+    });
+
+</script>
+
+<!--
+<script>
+
+    // Set new default font family and font color to mimic Bootstrap's default styling
+    Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+    Chart.defaults.global.defaultFontColor = '#858796';
+
+    function number_format(number, decimals, dec_point, thousands_sep) {
+        // *     example: number_format(1234.56, 2, ',', ' ');
+        // *     return: '1 234,56'
+        number = (number + '').replace(',', '').replace(' ', '');
+        var n = !isFinite(+number) ? 0 : +number,
+            prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
+            sep = (typeof thousands_sep === 'undefined') ? ',' : thousands_sep,
+            dec = (typeof dec_point === 'undefined') ? '.' : dec_point,
+            s = '',
+            toFixedFix = function (n, prec) {
+                var k = Math.pow(10, prec);
+                return '' + Math.round(n * k) / k;
+            };
+        // Fix for IE parseFloat(0.55).toFixed(0) = 0;
+        s = (prec ? toFixedFix(n, prec) : '' + Math.round(n)).split('.');
+        if (s[0].length > 3) {
+            s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep);
+        }
+        if ((s[1] || '').length < prec) {
+            s[1] = s[1] || '';
+            s[1] += new Array(prec - s[1].length + 1).join('0');
+        }
+        return s.join(dec);
+    }
+
+    // Area Chart Example
+    var ctx = document.getElementById("myAreaChart");
+    var myLineChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+            datasets: [{
+                label: "Expenses",
+                lineTension: 0.1,
+                backgroundColor: "rgba(78, 115, 223, 0.05)",
+                borderColor: "rgba(78, 115, 223, 1)",
+                pointRadius: 3,
+                pointBackgroundColor: "rgba(78, 115, 223, 1)",
+                pointBorderColor: "rgba(78, 115, 223, 1)",
+                pointHoverRadius: 3,
+                pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
+                pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+                pointHitRadius: 10,
+                pointBorderWidth: 2,
+                data: [0, 10000, 5000, 15000, 10000, 20000, 15000, 25000, 20000, 30000, 25000, 40000, 50000],
+            }],
+        },
+        options: {
+            maintainAspectRatio: false,
+            layout: {
+                padding: {
+                    left: 10,
+                    right: 25,
+                    top: 25,
+                    bottom: 0
+                }
+            },
+            scales: {
+                xAxes: [{
+                    time: {
+                        unit: 'date'
+                    },
+                    gridLines: {
+                        display: false,
+                        drawBorder: false
+                    },
+                    ticks: {
+                        maxTicksLimit: 20
+                    }
+                }],
+                yAxes: [{
+                    ticks: {
+                        maxTicksLimit: 5,
+                        padding: 10,
+                        // Include a dollar sign in the ticks
+                        callback: function (value, index, values) {
+                            return '$' + number_format(value);
+                        }
+                    },
+                    gridLines: {
+                        color: "rgb(234, 236, 244)",
+                        zeroLineColor: "rgb(234, 236, 244)",
+                        drawBorder: false,
+                        borderDash: [2],
+                        zeroLineBorderDash: [2]
+                    }
+                }],
+            },
+            legend: {
+                display: false
+            },
+            tooltips: {
+                backgroundColor: "rgb(255,255,255)",
+                bodyFontColor: "#858796",
+                titleMarginBottom: 10,
+                titleFontColor: '#6e707e',
+                titleFontSize: 14,
+                borderColor: '#dddfeb',
+                borderWidth: 1,
+                xPadding: 15,
+                yPadding: 15,
+                displayColors: false,
+                intersect: false,
+                mode: 'index',
+                caretPadding: 10,
+                callbacks: {
+                    label: function (tooltipItem, chart) {
+                        var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                        return datasetLabel + ': $' + number_format(tooltipItem.yLabel);
+                    }
+                }
+            }
+        }
+    });
+
+</script>-->
